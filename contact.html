@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Info</title>
+    <link rel="icon" type="image/png" href="../static/src/icon.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f0f0f0; /* 浅灰色背景 */
+            margin: 0; /* 去掉默认的边距 */
+            padding: 0; /* 去掉默认的内边距 */
+            overflow: hidden; /* Hide overflow to ensure circles stay within the viewport */
+        }
+
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+            margin-left: 20px;
+        }
+
+        /* 深色图标样式 */
+        .navbar-dark .nav-link.contact {
+            color: #000; /* 深色文字 */
+        }
+
+        .navbar-dark .nav-link.contact:hover {
+            color: #333; /* 深色悬停效果 */
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            position: relative; /* Add relative positioning for circle positioning */
+        }
+
+        .column {
+            padding: 20px;
+            background-color: white; /* 白色背景 */
+            border-radius: 5px; /* 可选：圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 可选：阴影 */
+            margin: 20px;
+        }
+
+        .left-column {
+            background-color: #f8f9fa;
+        }
+
+        .right-column {
+            background-color: #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Rotating circles */
+        .circle-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .circle {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: orange;
+        }
+
+        .circle-1 {
+            animation: rotate 10s linear infinite;
+        }
+
+        .circle-2 {
+            animation: rotate 15s linear infinite reverse;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg) translateX(150px) rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg) translateX(150px) rotate(-360deg);
+            }
+        }
+
+        .github-link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .github-link:hover .fab {
+            color: #4078c0; /* 更改为你想要的颜色 */
+        }
+
+        .footer-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 139, 0.3); /* 深蓝色半透明 */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .footer-bar .line {
+            margin: 0;
+        }
+
+        /* Entrance animation */
+        .entrance-animation {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 10px; /* 缩小初始大小 */
+            height: 10px; /* 缩小初始大小 */
+            background-color: purple;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            animation: expand 1s ease-out forwards;
+        }
+
+        @keyframes expand {
+            to {
+                transform: translate(-50%, -50%) scale(50); /* 缩小缩放比例 */
+                opacity: 0;
+            }
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="entrance-animation" id="entrance-animation"></div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">
+        <img src="../static/src/headerimg.jpg" alt="WolfCreate Icon">
+        WolfCreate
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#team-section">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link contact" href="#">Contact</a> <!-- 添加了 contact 类 -->
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="circle-container">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+    </div>
+    <div class="column left-container">
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                 class="bi bi-browser-chrome" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M16 8a8 8 0 0 1-7.022 7.94l1.902-7.098a3 3 0 0 0 .05-1.492A3 3 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8M0 8a8 8 0 0 0 7.927 8l1.426-5.321a3 3 0 0 1-.723.255 3 3 0 0 1-1.743-.147 3 3 0 0 1-1.043-.7L.633 4.876A8 8 0 0 0 0 8m5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a3 3 0 0 0-1.252.243 2.99 2.99 0 0 0-1.81 2.59M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+            </svg>
+            Contact us!
+        </h2>
+        <p>
+            If you have any recommendation or find any bug, please do not hesitate to contact us!
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x"
+                 viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708"/>
+                <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+            </svg>
+        </p>
+    </div>
+    <div class="column right-container">
+        <h2>谢谢你喜欢我们的APP！</h2>
+        <p><a href="https://github.com/JusArthur" class="github-link" target="_blank">
+            <i class="fab fa-github"></i> Github
+        </a></p>
+    </div>
+</div>
+
+<div class="footer-bar">
+    <p class="line">© 2024 Sidere mens eadem mutato</p>
+    <p class="line">繁星纵灭，智慧永存</p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9iWy+Io5n28FQ5m1cD1Qu+a44A3XzV7tM5L2NkFvmL4ZmgIjfT"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93q3fQ9VBH5RAgXbUs2UmhVWXsX+5nDt5yAnYwY1hW4gG5VhZWm3AqZ5OpEgK7"
+        crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const entranceAnimation = document.getElementById('entrance-animation');
+        entranceAnimation.addEventListener('animationend', () => {
+            entranceAnimation.classList.add('hide');
+        });
+    });
+</script>
+</body>
+</html>
