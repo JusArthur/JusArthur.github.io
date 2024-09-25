@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="icon" type="image/png" href="src/icon.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -22,7 +23,8 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: rgba(0, 0, 139, 0.3); /* 深蓝色半透明 */
+            background-color: rgba(0, 0, 139, 0.3);
+            /* 深蓝色半透明 */
             color: white;
             text-align: center;
             padding: 10px 0;
@@ -36,9 +38,11 @@
             0% {
                 background-color: #f5f5f5;
             }
+
             50% {
                 background-color: #a3e4d7;
             }
+
             100% {
                 background-color: #f5f5f5;
             }
@@ -79,15 +83,19 @@
             from {
                 width: 0;
             }
+
             to {
                 width: 100%;
             }
         }
 
         @keyframes blink-caret {
-            from, to {
+
+            from,
+            to {
                 border-color: transparent;
             }
+
             50% {
                 border-color: #333;
             }
@@ -104,6 +112,7 @@
             0% {
                 transform: translateY(0);
             }
+
             100% {
                 transform: translateY(-100%);
             }
@@ -111,7 +120,8 @@
 
         .scroll-container {
             overflow: hidden;
-            height: 100px; /* 控制显示区域的高度 */
+            height: 100px;
+            /* 控制显示区域的高度 */
             position: relative;
         }
 
@@ -176,25 +186,31 @@
             font-family: 'Courier New', Courier, monospace;
             overflow: hidden;
             border-right: .15em solid orange;
-            white-space: normal; /* 允许换行 */
-            word-wrap: break-word; /* 打字效果自动换行 */
+            white-space: normal;
+            /* 允许换行 */
+            word-wrap: break-word;
+            /* 打字效果自动换行 */
             animation: typing 3.5s steps(40, end),
-            blink-caret .75s step-end infinite;
+                blink-caret .75s step-end infinite;
         }
 
         @keyframes typing {
             from {
                 width: 0
             }
+
             to {
                 width: 100%
             }
         }
 
         @keyframes blink-caret {
-            from, to {
+
+            from,
+            to {
                 border-color: transparent
             }
+
             50% {
                 border-color: orange
             }
@@ -233,191 +249,212 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+
             50% {
                 transform: translateY(-20px);
                 opacity: 0.7;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-
     </style>
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand" href="#">
-        <img src="src/headerimg.jpg" alt="WolfCreate Icon">
-        WolfCreate
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="src/headerimg.jpg" alt="WolfCreate Icon">
+            WolfCreate
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link text-white" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#team-section">About</a> <!-- 修改了 href 属性 -->
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="./collab.html">Collaboration</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="content">
-                <h1>Welcome to WolfCreate Website!</h1>
-                <p>Thank you for liking our games and apps! We are an individual development team. Currently we have 3
-                    people in the team.</p>
-            </div>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#team-section">About</a> <!-- 修改了 href 属性 -->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="./collab.html">Collaboration</a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-6">
-            <div class="content">
-                <h1>欢迎来到我们的工作室！</h1>
-                <p class="typing-container">成员：<span class="highlight">5sx</span>, <span
-                        class="highlight">Tkine</span>, <span class="highlight">Justin</span>向你问好</p>
-                <p>In case I don't see you, good afternoon, good evening and good night!</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="scroll-container">
-    <div class="scroll-content">
-        <p>Tkine：Thank you so much for likes</p>
-        <p>5sx: What can I say. The guy on me is an idiot.</p>
-        <p>Love from China、Canada and USA。</p>
-        <p>Justin: Anyway Tkine is dumbest</p>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="content">
-                <h2>Our Application - Clever Management</h2>
-                <p id="app-description" class="typing-effect"></p>
-            </div>
-        </div>
-        <div class="col-md-6 text-center position-relative">
-            <img src="src/miaoji.jpg" alt="Money Management Icon"
-                 style="max-width: 250px; border-radius: 50%;">
-            <div class="bubble bubble1">5K likes</div>
-            <div class="bubble bubble2">Positive Comments 90%</div>
-            <div class="bubble bubble3">VIVO featured</div>
-        </div>
-    </div>
-</div>
-
-
-<div class="container team-section" id="team-section"> <!-- 添加了 id 属性 -->
-    <h2>Meet Our Team</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="team-member">
-                <div class="col-md-4 text-center">
-                    <img src="src/5sx.jpg" alt="5sx">
-                    <h3>5sx</h3>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <h1>Welcome to WolfCreate Website!</h1>
+                    <p>Thank you for liking our games and apps! We are an individual development team. Currently we have
+                        3
+                        people in the team.</p>
                 </div>
-                <div class="col-md-8">
-                    <div class="team-member-info">
-                        <p>5sx is the lead developer who specializes in game design and development. Passionate about
-                            creating immersive experiences and innovative gameplay.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="content">
+                    <h1>欢迎来到我们的工作室！</h1>
+                    <p class="typing-container">成员：<span class="highlight">5sx</span>, <span
+                            class="highlight">Tkine</span>, <span class="highlight">Justin</span>向你问好</p>
+                    <p>In case I don't see you, good afternoon, good evening and good night!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-container">
+        <div class="scroll-content">
+            <p>Tkine：Thank you so much for likes</p>
+            <p>5sx: What can I say. The guy on me is an idiot.</p>
+            <p>Love from China、Canada and USA。</p>
+            <p>Justin: Anyway Tkine is dumbest</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="content">
+                    <h2>Our Application - Clever Management</h2>
+                    <p id="app-description" class="typing-effect"></p>
+                </div>
+            </div>
+            <div class="col-md-6 text-center position-relative">
+                <img src="src/miaoji.jpg" alt="Money Management Icon" style="max-width: 250px; border-radius: 50%;">
+                <div class="bubble bubble1">5K likes</div>
+                <div class="bubble bubble2">Positive Comments 90%</div>
+                <div class="bubble bubble3">VIVO featured</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container team-section" id="team-section"> <!-- 添加了 id 属性 -->
+        <h2>Meet Our Team</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="team-member">
+                    <div class="col-md-4 text-center">
+                        <img src="src/5sx.jpg" alt="5sx">
+                        <h3>5sx</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="team-member-info">
+                            <p>5sx is the lead developer who specializes in game design and development. Passionate
+                                about
+                                creating immersive experiences and innovative gameplay.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="team-member">
+                    <div class="col-md-4 text-center">
+                        <img src="src/tcc.jpg" alt="Tkine">
+                        <h3>Tkine</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="team-member-info">
+                            <p>Tkine is our creative designer. With a keen eye for detail, Tkine is responsible for all
+                                the
+                                visual aspects of our games, from graphics to UI/UX design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="team-member">
+                    <div class="col-md-4 text-center">
+                        <img src="src/Me.jpg" alt="Justin">
+                        <h3>Justin</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="team-member-info">
+                            <p>Justin handles the marketing and community management. The leader and the founder of
+                                wolfmen
+                                create studio. He likes playing games and programming.
+                                Justin's game lists: Far Cry, Watch Dogs2, NBA2K</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="team-member">
+                    <div class="col-md-4 text-center">
+                        <img src="src/Fan.png" alt="Fan">
+                        <h3>DayBreak</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="team-member-info">
+                            <p>DayBreak Luo Fan is an expert in UI design and made a difference to the studio.
+                                He designed the page and total plan which helped us to get a huge progress
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="team-member">
-                <div class="col-md-4 text-center">
-                    <img src="src/tcc.jpg" alt="Tkine">
-                    <h3>Tkine</h3>
-                </div>
-                <div class="col-md-8">
-                    <div class="team-member-info">
-                        <p>Tkine is our creative designer. With a keen eye for detail, Tkine is responsible for all the
-                            visual aspects of our games, from graphics to UI/UX design.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-12">
-            <div class="team-member">
-                <div class="col-md-4 text-center">
-                    <img src="src/Me.jpg" alt="Justin">
-                    <h3>Justin</h3>
-                </div>
-                <div class="col-md-8">
-                    <div class="team-member-info">
-                        <p>Justin handles the marketing and community management. The leader and the founder of wolfmen
-                            create studio. He likes playing games and programming.
-                            Justin's game lists: Far Cry, Watch Dogs2, NBA2K</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-</div>
 
-<div class="footer-bar">
-    <p class="line">© 2024 Sidere mens eadem mutato</p>
-    <p class="line">繁星纵灭，智慧永存</p>
-</div>
+    <div class="footer-bar">
+        <p class="line">© 2024 Sidere mens eadem mutato</p>
+        <p class="line">繁星纵灭，智慧永存</p>
+    </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const description = "Clever Management is a free, easy-to-use app for keeping track of your expenses and income. Fully free and secure, it helps you manage your finances effectively.";
-        let i = 0;
-        const typingSpeed = 50;
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const description = "Clever Management is a free, easy-to-use app for keeping track of your expenses and income. Fully free and secure, it helps you manage your finances effectively.";
+            let i = 0;
+            const typingSpeed = 50;
 
-        function typeWriter() {
-            if (i < description.length) {
-                document.getElementById("app-description").innerHTML += description.charAt(i);
-                i++;
-                setTimeout(typeWriter, typingSpeed);
+            function typeWriter() {
+                if (i < description.length) {
+                    document.getElementById("app-description").innerHTML += description.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, typingSpeed);
+                }
             }
-        }
 
-        typeWriter();
-    });
+            typeWriter();
+        });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const highlights = document.querySelectorAll('.highlight');
-        let index = 0;
+        document.addEventListener("DOMContentLoaded", function () {
+            const highlights = document.querySelectorAll('.highlight');
+            let index = 0;
 
-        function highlightNext() {
-            if (highlights.length > 0) {
-                highlights.forEach((el, i) => {
-                    if (i === index) {
-                        el.classList.add('cyan');
-                    } else {
-                        el.classList.remove('cyan');
-                    }
-                });
-                index = (index + 1) % highlights.length;
+            function highlightNext() {
+                if (highlights.length > 0) {
+                    highlights.forEach((el, i) => {
+                        if (i === index) {
+                            el.classList.add('cyan');
+                        } else {
+                            el.classList.remove('cyan');
+                        }
+                    });
+                    index = (index + 1) % highlights.length;
+                }
             }
-        }
 
-        setInterval(highlightNext, 1000);
-    });
-</script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            setInterval(highlightNext, 1000);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz4fnFO9iWy+Io5n28FQ5m1cD1Qu+a44A3XzV7tM5L2NkFvmL4ZmgIjfT"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93q3fQ9VBH5RAgXbUs2UmhVWXsX+5nDt5yAnYwY1hW4gG5VhZWm3AqZ5OpEgK7"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
